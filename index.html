@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Besart Sherifi Portfolio</title>
+    <!--CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--boxicons-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerContainer"></div>
+    </header>
+    <section class="home" id="home">
+      <div id="homeContainer"></div>
+    </section>
+    <section class="about" id="about">
+      <div id="aboutContainer"></div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <div id="portfolioContainer"></div>
+    </div>
+    </section>
+    <section class="contact" id="contact">
+      <div id="contactContainer"></div>
+    </section>
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Besart <span>Sherifi</span> | All Rights Reserved.</p>
+        </div>
+    </footer>
+<!--Javascript-->
+    <script type="module">
+      import HeaderComponent from './components/Header.js';
+      import { headerData } from './js/data.js';
+      const headerSection = HeaderComponent(headerData, initializeScript);
+      document.getElementById('headerContainer').innerHTML = headerSection;
+    </script>
+    <script type="module">
+      import HomeComponent from './components/Home.js';
+      import { homeData } from './js/data.js';
+      const homeSection = HomeComponent(homeData, initializeScript);
+      document.getElementById('homeContainer').innerHTML = homeSection;
+    </script>
+    <script type="module">
+      import AboutComponent from './components/About.js';
+      import { aboutData } from './js/data.js';
+      const aboutSection = AboutComponent(aboutData, initializeScript);
+      document.getElementById('aboutContainer').innerHTML = aboutSection;
+    </script>
+    
+    <script type="module">
+      import PortfolioComponent from './components/Portfolio.js';
+      import { portfolioData } from './js/data.js';
+      const portfolioSection = PortfolioComponent(portfolioData,initializeScript);
+      document.getElementById('portfolioContainer').innerHTML = portfolioSection;
+    </script>
+    <script type="module">
+          import ContactComponent from "./components/Contact.js";
+          const contactSection = ContactComponent();
+          document.getElementById('contactContainer').innerHTML = contactSection;
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
